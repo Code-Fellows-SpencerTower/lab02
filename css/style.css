@@ -1,0 +1,15 @@
+html {
+    background-color: black;
+    margin: 20px;
+    color:aliceblue;  
+    font-size: x-large;  
+}
+ul {
+    margin: 20px;
+    font-size: x-large;
+    list-style-type: square;
+}
+li {
+    margin: 10px;
+
+}

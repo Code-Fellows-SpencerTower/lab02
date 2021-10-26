@@ -29,6 +29,7 @@ function userName() {
 function colorAnswer() {
     let userAnswer = prompt("Is Daniel's favorite color blue?","please type either 'yes' or 'no'") 
     let answerColor = userAnswer.toLowerCase();
+    document.querySelector("#color").textContent = "nice, his favorite color IS blue!";
 
     if(answerColor === "yes") {
         alert("nice.");
@@ -44,6 +45,7 @@ function colorAnswer() {
 function dogAnswer() {
     let userAnswer = prompt("Is Daniel's dog named Bleu?","please type either 'yes' or 'no'");
     let answerDog = userAnswer.toLowerCase();
+    document.querySelector("#dog").textContent = "good stuff, his dog's name is Clark.";
 
     if(answerDog === "no") {
         alert("good stuff, his dog's name is Clark.");
@@ -56,9 +58,11 @@ function dogAnswer() {
 }
 
 
+
 function catAnswer() {
     let userAnswer = prompt("Is Daniel's cat named Archie?","please type either 'yes' or 'no'"); 
     let answerCat = userAnswer.toLowerCase();
+    document.querySelector("#cat").textContent = "good stuff, his cat's name is Archie.";
 
     if(answerCat === "yes") {
         alert("good stuff, his cat's name is Archie.");
@@ -74,6 +78,7 @@ function catAnswer() {
 function carAnswer() {
     let userAnswer = prompt("Is Daniel's car a Tacoma?","please type either 'yes' or 'no'"); 
     let answerCar = userAnswer.toLowerCase();
+    document.querySelector("#car").textContent = "good stuff, his car is a Tacoma, and he will not shut up about it!";
 
     if(answerCar === "yes") {
         alert("good stuff, his car is a Tacoma, and he will not shut up about it!");
@@ -89,6 +94,7 @@ function carAnswer() {
 function foodAnswer() {
     let userAnswer = prompt("Is Daniel's favorite food pizza?","please type either 'yes' or 'no'"); 
     let answerFood = userAnswer.toLowerCase();
+    document.querySelector("#food").textContent = `good stuff, his favorite food is actually burritos, yes plural. Thank you for playing ${username} !`;
 
     if(answerFood === "no") {
         alert("good stuff, his favorite food is actually burritos, yes plural. Thank you for playing " + username + "!");
