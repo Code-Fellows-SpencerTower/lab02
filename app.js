@@ -16,42 +16,19 @@
 //     default:
 //         console.log('Sorry, we are out of ' + expr + '.');
 // }
-let userAnswer = prompt("Is Daniel's favorite color blue?") 
-let answerColor = userAnswer.toLowerCase();
+function color() {
+    let userAnswer = prompt("Is Daniel's favorite color blue?") 
+    let answerColor = userAnswer.toLowerCase();
 
-if(answerColor === "yes") {
-    alert("nice.");
-}
-else {
-    alert("you tried..");
-}
-
-if(answerColor === "yes") {
-    alert("nice.");
-}
-else {
-    alert("you tried..");
+    if(answerColor === "yes") {
+        alert("nice.");
+        console.log("nice, his favorite color IS blue!")
+    }
+    else {
+        alert("you tried..");
+        console.log("feels bad, you'll get the next one.")
+    }
 }
 
-if(answerColor === "yes") {
-    alert("nice.");
-}
 
-else {
-    alert("you tried..");
-}
-
-if(answerColor === "yes") {
-    alert("nice.");
-}
-else {
-    alert("you tried..");
-}
-
-if(answerColor === "yes") {
-    alert("nice.");
-}
-else {
-    alert("you tried..");
-}
 
