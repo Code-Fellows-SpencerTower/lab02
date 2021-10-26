@@ -1,3 +1,5 @@
+'get strict';
+
 let someData = 4;
 
 let resultFromTypeOf = typeof(someData);
