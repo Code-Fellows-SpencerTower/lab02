@@ -1,11 +1,23 @@
 html {
-    background-color: black;
+    background-color: #141301;
     margin: 20px;
     color:aliceblue;  
     font-size: x-large;  
 }
+#bio {
+    margin:  25px;
+    padding: 15px;
+    color:black;
+    background-color: #E5E7E6;
+    font-size: x-large;
+    list-style-type: square
+}
 ul {
-    margin: 20px;
+    margin:  25px;
+    margin-left: 25;
+    padding: 15px;
+    color:black;
+    background-color: #E5E7E6;
     font-size: x-large;
     list-style-type: square;
 }
