@@ -4,24 +4,50 @@ html {
     color:aliceblue;  
     font-size: x-large;  
 }
+h1 {
+    text-align: center;
+    font-size: 200%;
+    background-color: #775253;
+    padding: 10px;
+    border: 3px solid;
+    border-color: #4B88A2;
+}
 #bio {
     margin:  25px;
     padding: 15px;
+    border: 5px solid;
+    border-color: #4B88A2;
     color:black;
     background-color: #E5E7E6;
-    font-size: x-large;
+    font-size: xx-large;
     list-style-type: square
 }
 ul {
     margin:  25px;
     margin-left: 25;
     padding: 15px;
+    border: 5px solid;
+    border-color: #4B88A2;
     color:black;
     background-color: #E5E7E6;
-    font-size: x-large;
+    font-size: xx-large;
     list-style-type: square;
+    list-style-position: inside;
 }
 li {
     margin: 10px;
 
+}
+p {
+    margin:  25px;
+    padding: 15px;
+    border: 5px solid;
+    border-color: #4B88A2;
+    color:black;
+    background-color: #E5E7E6;
+    font-size: xx-large;
+    list-style-type: square
+}
+img {
+    scale: .5;
 }
