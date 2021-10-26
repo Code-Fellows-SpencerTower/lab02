@@ -1,11 +1,34 @@
-'get strict';
+'use strict';
+/*
 
-let someData = 4;
+let userResponse = prompt("Pick a number");
 
-let resultFromTypeOf = typeof(someData);
+let numberPicked = parseInt(userResponse);
 
-console.log('resultFromTypeOf = ', resultFromTypeOf);
+// we want to say Congrats when correct number (42) is entered
+// otherwise we say sorry
 
-let doubled = someData + someData;
+if(numberPicked === 42) {
+    alert("Congrats");
+} else {
+    alert("sorry");
+}
 
-console.log('doubled', doubled);
+*/
+
+let expr = prompt("Choose a fruit, oranges, mangoes, or papayas");
+let exprReg = expr.toLowerCase();
+
+switch (exprReg) {
+    case 'oranges':
+        console.log('Oranges are $0.59 a pound');
+        break;
+    case 'mangoes':
+        console.log('Got Mangoes');
+        break;
+    case 'papayas':
+        console.log('Papayas are 2.79 a pound');
+        break;
+    default:
+        console.log('Sorry, we are out of ' + expr + '.');
+}
