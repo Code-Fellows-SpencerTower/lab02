@@ -20,6 +20,7 @@
 let username;
 let count = 0;
 
+function guessingGame() 
 function userName() {
     username = prompt("What is your name?");   
     // console.log(username + "! Welcome to the site!"); 
