@@ -18,6 +18,7 @@
 // }
 
 let username;
+let count = 0;
 
 function userName() {
     username = prompt("What is your name?");   
@@ -36,10 +37,13 @@ function colorAnswer() {
 
     if(answerColor === "yes") {
         alert("nice.");
+        document.getElementById('inc').value = ++count;
+        console.log(count);
         // console.log("nice, his favorite color IS blue!");
     }
     else {
         alert("you tried..");
+        console.log(count);
         // console.log("feels bad, you'll get the next one.");
     }
 }
@@ -52,10 +56,13 @@ function dogAnswer() {
 
     if(answerDog === "no") {
         alert("good stuff, his dog's name is Clark.");
+        document.getElementById('inc').value = ++count;
+        console.log(count);
         // console.log("good stuff, his dog's name is Clark");
     }
     else {
         alert("you tried..");
+        console.log(count);
         // console.log("feels bad, you'll get the next one.");
     }
 }
@@ -69,10 +76,13 @@ function catAnswer() {
 
     if(answerCat === "yes") {
         alert("good stuff, his cat's name is Archie.");
+        document.getElementById('inc').value = ++count;
+        console.log(count);
         // console.log("good stuff, his cat's name is Archie");
     }
     else {
         alert("you tried..");
+        console.log(count);
         // console.log("feels bad, you'll get the next one.");
     }
 }
@@ -85,10 +95,13 @@ function carAnswer() {
 
     if(answerCar === "yes") {
         alert("good stuff, his car is a Tacoma, and he will not shut up about it!");
+        document.getElementById('inc').value = ++count;
+        console.log(count);
         // console.log("good stuff, his car is a Tacoma, and he will not shut up about it!");
     }
     else {
         alert("you tried..");
+        console.log(count);
         // console.log("feels bad, you'll get the next one.");
     }
 }
@@ -101,10 +114,17 @@ function foodAnswer() {
 
     if(answerFood === "no") {
         alert("Very nice, his favorite food is actually burritos, yes plural. Thank you for playing " + username + "!");
+        document.getElementById('inc').value = ++count;
+        console.log(count);
         // console.log("good stuff, his favorite food is actually burritos, yes plural. Thank you for playing " + username + "!");
     }
     else {
         alert("you tried.. but have a good day " + username + "!");
+        console.log(count);
         // console.log("feels bad, but have a good day " + username + "!");
     }
+}
+
+function correctAnswer() {
+    document.getElementById('inc').textContent = `You answered ${count}/5 right, thanks for playing ${username}!`
 }
