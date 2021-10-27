@@ -60,7 +60,7 @@ img {
     width: 100%;
 }
 
-#stateList {
+article {
     margin:  25px;
     padding: 15px;
     border: 5px solid;
@@ -68,8 +68,21 @@ img {
     color:black;
     background-color: #E5E7E6;
     font-size: xx-large;
+}
+
+#stateList {
+    display: table;
     list-style-type:decimal-leading-zero;
     list-style-position: inside;
+}
+
+h3 {
+    align-content: center;
+}
+.cell {
+    padding-top: 50px;
+    display: table-cell;
+    width: 22.11%;
 }
 
 #inc {
