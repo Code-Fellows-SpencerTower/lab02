@@ -4,6 +4,7 @@ html {
     color:aliceblue;  
     font-size: x-large;  
 }
+
 h1 {
     text-align: center;
     font-size: 200%;
@@ -12,6 +13,7 @@ h1 {
     border: 3px solid;
     border-color: #4B88A2;
 }
+
 #bio {
     margin:  25px;
     padding: 15px;
@@ -22,6 +24,7 @@ h1 {
     font-size: xx-large;
     list-style-type: square
 }
+
 ul {
     margin:  25px;
     margin-left: 25;
@@ -34,10 +37,11 @@ ul {
     list-style-type: square;
     list-style-position: inside;
 }
+
 li {
     margin: 10px;
-
 }
+
 p {
     margin:  25px;
     padding: 15px;
@@ -48,11 +52,17 @@ p {
     font-size: xx-large;
     list-style-type: square
 }
+
 img {
     width: 1710px;
 }
+
 #inc {
     font-size: 1.75em;
-    color: red;
+    color: #E5E7E6;
     text-align: center;
+    background-color: #775253;
+    padding: 10px;
+    border: 3px solid;
+    border-color: #4B88A2;
 }
