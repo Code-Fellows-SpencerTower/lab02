@@ -110,7 +110,7 @@ function carAnswer() {
 function foodAnswer() {
     let userAnswer = prompt("Is Daniel's favorite food pizza?","please type either 'yes' or 'no'"); 
     let answerFood = userAnswer.toLowerCase();
-    document.querySelector("#food").textContent = `His favorite food is actually burritos, yes plural! Thank you for playing ${username}!`;
+    document.querySelector("#food").textContent = `His favorite food is actually burritos, yes plural!`;
 
     if(answerFood === "no") {
         alert("Very nice, his favorite food is actually burritos, yes plural!");
