@@ -1,7 +1,7 @@
 html {
     background-color: #141301;
-    margin: 20px;
-    color:aliceblue;  
+    margin: 20px; 
+    color:aliceblue; 
     font-size: x-large;  
 }
 
@@ -24,8 +24,11 @@ h1 {
     font-size: xx-large;
     list-style-type: square
 }
+/* #btn {
 
-ul {
+} */
+
+#answerList {
     margin:  25px;
     margin-left: 25;
     padding: 15px;
@@ -55,6 +58,18 @@ p {
 
 img {
     width: 100%;
+}
+
+#stateList {
+    margin:  25px;
+    padding: 15px;
+    border: 5px solid;
+    border-color: #4B88A2;
+    color:black;
+    background-color: #E5E7E6;
+    font-size: xx-large;
+    list-style-type:decimal-leading-zero;
+    list-style-position: inside;
 }
 
 #inc {
