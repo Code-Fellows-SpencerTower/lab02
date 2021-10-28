@@ -52,45 +52,50 @@ function correctAnswerCount() {
 function question6() {
     let i;
     let userAnswerNumb;
+    let guessed = true;
 
-    for(i = 0; i < 4; i++) {
-       userAnswerNumb = prompt(`Guess a number between 1 and 10!`);
-       userAnswerNumb = parseInt(userAnswerNumb, 10);
+    while(guessed == true) {
+        for(i = 0; i < 4; i++) {
+        userAnswerNumb = prompt(`Guess a number between 1 and 10!`);
+        userAnswerNumb = parseInt(userAnswerNumb, 10);
 
-       if(userAnswerNumb === 5) {
-           alert(`Well done!`);
-           document.querySelector('#guessing').textContent = `Wow, so clever ${username}! The answer WAS 5!`;
-           count++;
-           break;
-       } else if(userAnswerNumb > 5) {
-           alert(`Too high, try again!`);
-           console.log(i);    
-       } else if(userAnswerNumb < 5){
-            alert(`Too low, try again!`);
+        if(userAnswerNumb === 5) {
+            alert(`Well done!`);
+            document.querySelector('#guessing').textContent = `Wow, so clever ${username}! The answer WAS 5!`;
+            count++;
+            guessed = false;
+            break;
+        } else if(userAnswerNumb > 5) {
+            alert(`Too high, try again!`);
             console.log(i);    
-       } else {
-           alert(`somebody didn't read the rules of the game..`)
-       }
-    }
+        } else if(userAnswerNumb < 5){
+                alert(`Too low, try again!`);
+                console.log(i);    
+        } else {
+            alert(`somebody didn't read the rules of the game..`)
+        }
+        }
 
-    if(i === 4) {
-        alert(`Sorry, you used all your tries! The correct answer was 5`);
-        document.querySelector('#guessing').textContent = `Sorry, you used all your tries! The correct answer was 5..`;
-    }
-}
-
-function question7() {
-    let correctAnswers = ['Archie', 'Clark']
-    let i;
-    let userAnswer;
-
-    for(i = 0; i < 6; i++) {
-        userAnswer = prompt(`Guess the names of my animals from the list!`, `Archie, Joey, Clark, Pete, JimBob, Coolio`);
-        userAnswer = parseInt(userAnswerNumb, 10);
-
-        if(userAnswer === 'Archie' || 'Clark')
+        if(i === 4) {
+            alert(`Sorry, you used all your tries! The correct answer was 5`);
+            guessed = false;
+            document.querySelector('#guessing').textContent = `Sorry, you used all your tries! The correct answer was 5..`;
+        }
     }
 }
+
+// function question7() {
+//     let correctAnswers = ['Archie', 'Clark']
+//     let i;
+//     let userAnswer;
+
+//     for(i = 0; i < 6; i++) {
+//         userAnswer = prompt(`Guess the names of my animals from the list!`, `Archie, Joey, Clark, Pete, JimBob, Coolio`);
+//         userAnswer = parseInt(userAnswerNumb, 10);
+
+//         if(userAnswer === 'Archie' || 'Clark')
+//     }
+// }
     
     
 
