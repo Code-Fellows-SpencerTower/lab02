@@ -46,7 +46,7 @@ function allAnswer() {
 }
 
 function correctAnswerCount() {
-    document.getElementById('inc').textContent = `You answered ${count}/6 right, thanks for playing ${username}!`
+    document.getElementById('inc').textContent = `You answered ${count}/7 right, thanks for playing ${username}!`
 }
 
 function question6() {
@@ -98,6 +98,7 @@ function question7() {
             if(userAnswer1 && userAnswer2) {
                 alert(`Congrats! Well done guessing`)
                 count++;
+                // document.querySelector('catguess').textContent = `Well done ${username}, somebody pays attention!`
                 break; 
             }
         } else if(answerLower === choices[4]) {
@@ -108,6 +109,7 @@ function question7() {
             if(userAnswer1 && userAnswer2) {
                 alert(`Congrats! Well done guessing`)
                 count++;
+                // document.querySelector('catguess').textContent = `Well done ${username}, somebody pays attention!`
                 break; 
             }
         } else if(i === 5) {
