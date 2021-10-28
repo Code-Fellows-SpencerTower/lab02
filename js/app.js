@@ -82,11 +82,39 @@ function question6() {
     }
 
 function question7() {
-    let correctAnswers, i, userAnswer;
+    let choices = ['tim', 'archie', 'hank', 'jimbob', 'clark', 'princess', 'tucker'];
+    let userAnswer1 = false;
+    let userAnswer2 = false;
 
     for(i = 0; i < 6; i++) {
-        prompt(`Please guess my animal names`)
-        if(correctAnswers === true);
+        let userAnswer  = prompt(`Please guess my animal names from the provided list..`, `Tim, Archie, Hank, Jimbob, Clark, Princess, Tucker`);
+        let answerLower = userAnswer.toLowerCase();
+        console.log(i);
+        if(answerLower === choices[1]) {
+            alert(`That's one!`);
+            userAnswer1 = true;
+            console.log(choices[1]);
+            console.log(userAnswer1);
+            if(userAnswer1 && userAnswer2) {
+                alert(`Congrats! Well done guessing`)
+                count++;
+                break; 
+            }
+        } else if(answerLower === choices[4]) {
+            alert(`That's another one!`)
+            userAnswer2 = true;
+            console.log(choices[4]);
+            console.log(userAnswer2);
+            if(userAnswer1 && userAnswer2) {
+                alert(`Congrats! Well done guessing`)
+                count++;
+                break; 
+            }
+        } else if(i === 5) {
+            alert('You tried, the correct answers were Archie(my cat) and Clark(my dog)')
+        } else {
+            console.log('oops');
+        }
     }
 }
     
