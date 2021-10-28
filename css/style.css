@@ -25,6 +25,17 @@ h1 {
     list-style-type: square
 }
 
+#btn {
+    width:80%;
+    height:50px;
+    position: relative;
+    left: 10%;
+    background-color: #4B88A2;
+    color:#E5E7E6;
+    font-size: 1.2em;
+    border-color: #775253;
+    font-style: Copperplate;
+}
 #bioList {
     list-style-type: square;
     list-style-position: inside;
