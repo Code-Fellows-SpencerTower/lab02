@@ -25,7 +25,7 @@ function userName() {
 // userName();
 
 function allAnswer() {
-    for (i = 0; i < questions.length; i++) {
+    for (i = 0; i < questions.length; i += 1) {
 
         let userAnswer = prompt(questions[i])
         let answerLowerCase = userAnswer.toLowerCase();
@@ -34,7 +34,7 @@ function allAnswer() {
 
         if (answerLowerCase === correctAnswer[i]) {
             alert("nice.");
-            document.getElementById('inc').value = ++count;
+            document.getElementById('inc').value = count += 1;
             console.log(count);
             // console.log("nice, his favorite color IS blue!");
         } else {
@@ -50,17 +50,16 @@ function correctAnswerCount() {
 }
 
 function question6() {
-    let i;
     let userAnswerNumb;
 
-    for (i = 0; i < 4; i++) {
+    for (let x = 0; x < 4; x += 1) {
         userAnswerNumb = prompt(`Guess a number between 1 and 10!`);
-        userAnswerNumb = parseInt(userAnswerNumb, 10);
+        userAnswerNumb = parseInt(userAnswerNumb);
 
         if (userAnswerNumb === 5) {
             alert(`Well done!`);
             document.querySelector('#guessing').textContent = `Wow, so clever ${username}! The answer WAS 5!`;
-            count++;
+            count += 1;
             console.log(userAnswerNumb);
             break;
         } else if (userAnswerNumb > 5) {
@@ -71,11 +70,11 @@ function question6() {
             console.log(userAnswerNumb);
         } else {
             alert(`somebody didn't read the rules of the game..`)
-            i--;
+            x--;
         }
     }
 
-    if (i === 4) {
+    if (x === 4) {
         alert(`Sorry, you used all your tries! The correct answer was 5`);
         document.querySelector('#guessing').textContent = `Sorry, you used all your tries! The correct answer was 5..`;
     }
@@ -83,44 +82,49 @@ function question6() {
 
 function question7() {
     let choices = ['tim', 'archie', 'hank', 'jimbob', 'clark', 'princess', 'tucker'];
-    let userAnswer1 = false;
-    let userAnswer2 = false;
+    
+    let isUserCorrect1 = false;
+    let isUserCorrect2 = false; //Using these in order to escape the loop when the user get's both answers correct
 
-    for (i = 0; i < 6; i++) {
-        let userAnswer = prompt(`Please guess my animal names from the provided list..`, `Tim, Archie, Hank, Jimbob, Clark, Princess, Tucker`);
+    for (i = 0; i < 6; i += 1) {
+        let userAnswer = prompt(`Please guess my animal names from the provided list.. Tim, Archie, Hank, Jimbob, Clark, Princess, Tucker`);
         let answerLower = userAnswer.toLowerCase();
-        console.log(i);
+
         if (answerLower === choices[1]) {
             alert(`That's one!`);
-            userAnswer1 = true;
-            console.log(choices[1]);
-            console.log(userAnswer1);
-            if (userAnswer1 && userAnswer2) {
+            isUserCorrect1 = true;
+
+            if (isUserCorrect1 && isUserCorrect2) {
                 alert(`Congrats! Well done guessing`)
-                count++;
-                document.querySelector('#catguess').textContent = `Well done ${username}, somebody pays attention!`
+                count += 1;
+                document.querySelector('#catguess').textContent = `Well done ${username}, somebody pays attention! My animals names are Clark and Archie!`
                 break;
             }
         } else if (answerLower === choices[4]) {
             alert(`That's another one!`)
-            userAnswer2 = true;
-            console.log(choices[4]);
-            console.log(userAnswer2);
-            if (userAnswer1 && userAnswer2) {
+            isUserCorrect2 = true;
+
+            if (isUserCorrect1 && isUserCorrect2) {
                 alert(`Congrats! Well done guessing`)
-                count++;
-                document.querySelector('#catguess').textContent = `Well done ${username}, somebody pays attention!`
+                count += 1;
+                document.querySelector('#catguess').textContent = `Well done ${username}, somebody pays attention! My animals names are Clark and Archie!`
                 break;
             }
         } else if (i === 5) {
             alert('You tried, the correct answers were Archie(my cat) and Clark(my dog)')
-            document.querySelector('#catguess').textContent = `Dang, get em next time. My pets names are Archie and Clark`
+            document.querySelector('#catguess').textContent = `Dang, get em next time. My pets names are Archie and Clark!`
         } else {
-            console.log('oops');
+            
+            for (let j = 0; j < choices.length; j += 1) { // j = 7 breaks 
+                let cat = choices[j]; // cat = 'tucker'
+                if (answerLower !== cat); // franklin !== 'tucker'  TRUE
+                continue; // CONTINUE
+            }
+            alert('Sorry, that is not one of the choices!');
+            i -= 1; //used to give user attempt back for not entering one of the items on the array
         }
     }
 }
-
 
 
 
