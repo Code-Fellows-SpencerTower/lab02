@@ -115,13 +115,16 @@ function question7() {
             document.querySelector('#catguess').textContent = `Dang, get em next time. My pets names are Archie and Clark!`
         } else {
             
-            for (let j = 0; j < choices.length; j += 1) { // j = 7 breaks 
-                let cat = choices[j]; // cat = 'tucker'
-                if (answerLower !== cat); // franklin !== 'tucker'  TRUE
-                continue; // CONTINUE
+            for (let j = 0; j < choices.length; j += 1) { // j = 0  
+                let cat = choices[j]; // cat = 'tim'
+                if (answerLower === cat) { // tim === 'tim'  TRUE
+                    alert('Sorry, that is incorrect.')
+                    break;
+                } else if(j === 6) {
+                    alert('Sorry, that is not one of the choices!'); // I want this to happen when: full iteration, no matches, null
+                    i -= 1; //used to give user attempt back for not entering one of the items on the array
+                }
             }
-            alert('Sorry, that is not one of the choices!');
-            i -= 1; //used to give user attempt back for not entering one of the items on the array
         }
     }
 }
